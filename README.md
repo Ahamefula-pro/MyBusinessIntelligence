@@ -1,3 +1,3 @@
 ##myApp
 
-This is my Business Intelligence.
+This is my Business Intelligence - it is important.
