@@ -1,0 +1,8 @@
+
+
+============================== 2022-12-11 12:16:10.228200 | b27d6df3-4915-486c-9e62-c3cf99d15273 ==============================
+[0m12:16:10.228200 [info ] [MainThread]: Running with dbt=1.4.0-a1
+[0m12:16:10.230377 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\great\\.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'project_name': 'datawarehouse', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:16:10.232132 [debug] [MainThread]: Tracking: tracking
+[0m12:16:10.266184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C92ABB6E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C92AB918D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C9251F1E90>]}
+[0m12:16:10.271721 [debug] [MainThread]: Flushing usage events
