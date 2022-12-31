@@ -1,0 +1,27 @@
+bitraining:
+  outputs:
+    dev:
+      dataset: loreal_bigquerydata
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:/Users/great/OneDrive/Dokumente/Software/myessenceinterview-0b26b2e286a6.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: myessenceinterview
+      threads: 4
+      type: bigquery
+  target: dev
+sqlserver_projectv1:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      driver: 'ODBC Driver 17 for SQL Server' # (The ODBC Driver installed on your system)
+      server: AHAMEFULA\SQLEXPRESS
+      port: 1433
+      database: essencebi
+      schema: dbo
+      user: sa
+      password: ada
+      trust_cert: True
