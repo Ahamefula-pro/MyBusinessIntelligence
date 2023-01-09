@@ -1,0 +1,21 @@
+
+version: 2
+
+sources:
+  - name: tickets
+    tables:
+      - name: category
+        description: "The primary key for this table"
+      - name: date
+        description: "The primary key for this table"
+      - name: events
+        description: "The primary key for this table"
+      - name: listing
+        description: "The primary key for this table"
+      - name: sales
+        description: "The primary key for this table"
+      - name: users
+        description: "The primary key for this table"
+      - name: venue
+        description: "The primary key for this table"
+  
