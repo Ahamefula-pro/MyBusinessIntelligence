@@ -9,19 +9,18 @@
 
 {{ config(materialized='table') }}
 
-with source_data as (
+with source_loreal_youtube_data as (
 
-    select 1 as id
-    union all
-    select null as id
+    SELECT * FROM {{source('loreal_bigquerydata','loreal_youtube_data')}}
 
+),
+final as(
+select *,
+TRIM(SPLIT(insertion_order,"_")[SAFE_ORDINAL(1)]) AS Signature
+from source_loreal_youtube_data
 )
-
-select *
-from source_data
+SELECT * FROM final
 
 /*
     Uncomment the line below to remove records with null `id` values
 */
-
--- where id is not null

@@ -1,21 +1,18 @@
 
 version: 2
 
-models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          #- not_null
-
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          #- not_null
+sources:
+  - name: loreal_bigquerydata
+    tables:
+      - name: loreal_youtube_data
+        description: "Contains facebookads raw data at all resource levels"
+        columns:
+          - name: advertiser_id
+            description: campaign identification
+            tests:
+              - not_null
+              ##- unique
+      - name: loreal_product_sig
+        description: "Contains googleads raw data at ad resource levels"
+      - name: 2020xmxp
+        description: "Contains googleads raw data at ad resource levels"
