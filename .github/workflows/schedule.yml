@@ -1,1 +1,29 @@
+name: Schedule Notebook
 
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Schedule runs daily at midnight UTC
+
+jobs:
+  run_notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Install Jupyter
+        run: |
+          pip install jupyter
+
+      - name: Run notebook
+        run: |
+          jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=600 main_notebook.ipynb
+          git add main_notebook.ipynb
+          git commit -m "Auto-updated main notebook"
+          git push
