@@ -23,7 +23,7 @@ jobs:
 
       - name: Run notebook
         run: |
-          jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=600 main_notebook.ipynb
-          git add main_notebook.ipynb
+          jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=600 CustomerLifeTimeValue.ipynb
+          git add CustomerLifeTimeValue.ipynb
           git commit -m "Auto-updated main notebook"
           git push
